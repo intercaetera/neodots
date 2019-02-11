@@ -1,0 +1,13 @@
+#!/bin/sh
+sudo -v
+
+echo "Installing packages..."
+sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter kitty chromium dmenu zsh oh-my-zsh-git ttf-iosevka
+
+echo "Copying lightdm config to /etc/lightdm..."
+sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-mini-greeter.conf
+sudo cp ~/.config/etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp ~/.config/etc/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
+
+echo "Setting up oh-my-zsh..."
+sudo chsh justinian -s /bin/zsh
