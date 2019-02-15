@@ -14,7 +14,7 @@ alias lsd='ls -l | lolcat' # yes
 
 alias czsh='nvim ~/.zshrc'
 alias ctrm='nvim ~/.config/termite/config'
-alias cvrc='nvim ~/.vimrc'
+alias cvrc='nvim ~/.config/nvim/init.vim'
 alias ci3='nvim ~/.config/i3/config'
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
