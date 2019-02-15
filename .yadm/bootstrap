@@ -2,7 +2,7 @@
 sudo -v
 
 echo "Installing packages..."
-sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter kitty chromium dmenu zsh oh-my-zsh-git ttf-iosevka
+sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter termite chromium dmenu zsh oh-my-zsh-git ttf-iosevka
 
 echo "Copying lightdm config to /etc/lightdm..."
 sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-mini-greeter.conf
