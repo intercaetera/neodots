@@ -2,7 +2,7 @@
 sudo -v
 
 echo "Installing packages..."
-sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter termite chromium dmenu zsh oh-my-zsh-git ttf-iosevka
+sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter termite chromium dmenu zsh oh-my-zsh-git ttf-iosevka wpgtk-git feh neofetch thunar scrot
 
 echo "Copying lightdm config to /etc/lightdm..."
 sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-mini-greeter.conf
@@ -11,3 +11,8 @@ sudo cp ~/.config/etc/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-min
 
 echo "Setting up oh-my-zsh..."
 sudo chsh justinian -s /bin/zsh
+sudo cp -r /usr/share/oh-my-zsh/* ~/.oh-my-zsh
+sudo chown justinian:justinian -R .oh-my-zsh
+
+echo "Downloading wpg templates..."
+wpg-install.sh -gi

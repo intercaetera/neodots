@@ -1,5 +1,8 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# colours
+(cat ~/.config/wpg/sequences &)
+
 # zsh settings
 ZSH=~/.oh-my-zsh
 ZSH_THEME="lambda-mod"
@@ -13,6 +16,7 @@ alias vi=nvim
 alias lsd='ls -l | lolcat' # yes
 
 alias czsh='nvim ~/.zshrc'
+alias cbs='nvim ~/.yadm/bootstrap'
 alias ctrm='nvim ~/.config/termite/config'
 alias cvrc='nvim ~/.config/nvim/init.vim'
 alias ci3='nvim ~/.config/i3/config'
