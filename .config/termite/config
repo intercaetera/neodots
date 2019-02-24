@@ -1,2 +1,5 @@
 [options]
 font = Iosevka 10
+
+[colors]
+background = rgba(0, 0, 0, 0.93)
