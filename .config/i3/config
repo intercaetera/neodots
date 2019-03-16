@@ -11,6 +11,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # startup
 exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
 exec --no-startup-id sh ~/.config/wpg/wp_init.sh
+exec-always --no-startup-id zsh ~/.scripts/start_polybar.sh
 
 # actions
 bindsym $mod+Shift+q kill
