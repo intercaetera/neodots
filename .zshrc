@@ -20,6 +20,7 @@ alias cbs='nvim ~/.yadm/bootstrap'
 alias ctrm='nvim ~/.config/termite/config'
 alias cvrc='nvim ~/.config/nvim/init.vim'
 alias ci3='nvim ~/.config/i3/config'
+alias cpb='nvim ~/.config/wpg/templates/polybar.base'
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
