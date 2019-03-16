@@ -1,5 +1,5 @@
 [colors]
-background = ${{xrdb:color8:{color8}}}
+background = ${{xrdb:color8:{color1}}}
 foreground = ${{xrdb:color15:{color15}}}
 active = {active}
 inactive = {inactive}
