@@ -1,5 +1,5 @@
 [colors]
-background = ${{xrdb:color8:{color1}}}
+background = ${{xrdb:color8:{color8}}}
 foreground = ${{xrdb:color15:{color15}}}
 active = {active}
 inactive = {inactive}
@@ -142,7 +142,8 @@ format-background = ${{colors.background}}
 label = %date%%time%
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
 
 format-volume = <ramp-volume> <label-volume>
 format-volume-padding = 1
