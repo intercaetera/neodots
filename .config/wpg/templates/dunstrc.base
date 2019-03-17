@@ -1,5 +1,5 @@
 [colors]
-	background = "{color1}"
+	background = "{color8}"
 	foreground = "{color15}"
 
 [global]
@@ -16,7 +16,7 @@
     separator_height = 3
     padding = 12
     horizontal_padding = 12
-    frame_width = 3
+    frame_width = 1
 
     frame_color = "{color9}"
     separator_color = auto
@@ -24,7 +24,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = go mono 9
+    font = go mono 7
     line_height = 0
 
     markup = full

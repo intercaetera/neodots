@@ -1,6 +1,6 @@
 [colors]
-	background = "#E4C4BC"
-	foreground = "#fffbf9"
+	background = "#15283d"
+	foreground = "#e2ffff"
 
 [global]
     ### Display ###
@@ -16,15 +16,15 @@
     separator_height = 3
     padding = 12
     horizontal_padding = 12
-    frame_width = 3
+    frame_width = 1
 
-    frame_color = "#ffe1cd"
+    frame_color = "#c87e93"
     separator_color = auto
     sort = yes
     idle_threshold = 120
 
     ### Text ###
-    font = go mono 9
+    font = go mono 7
     line_height = 0
 
     markup = full
@@ -88,5 +88,5 @@
 [urgency_critical]
     background = colors.background
     foreground = colors.foreground
-    frame_color = "#ffe1cd"
+    frame_color = "#c87e93"
     timeout = 0

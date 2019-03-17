@@ -1,5 +1,5 @@
 [colors]
-background = ${{xrdb:color8:{color8}}}
+background = ${{xrdb:color8:{color0}}}
 foreground = ${{xrdb:color15:{color15}}}
 active = {active}
 inactive = {inactive}
@@ -131,15 +131,14 @@ label-connected = %local_ip%
 
 [module/date]
 type = internal/date
-interval = 5
-
-date = "%d %b %Y, "
-time = %I:%M %p
-
-format-padding = 1
-format-background = ${{colors.background}}
-
-label = %date%%time%
+interval = 1
+format-padding = 0
+date = "%d %b %Y"
+date-alt = "%F"
+time = %H:%M
+time-alt = %H:%M:%S
+label = "%date% %time%  "
+format = <label>
 
 [module/volume]
 type = internal/pulseaudio
