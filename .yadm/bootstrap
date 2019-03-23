@@ -2,7 +2,7 @@
 sudo -v
 
 echo "Installing packages..."
-sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter termite chromium dmenu zsh oh-my-zsh-git ttf-iosevka wpgtk-git feh neofetch thunar scrot compton polybar jsoncpp dunst
+sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter termite chromium dmenu zsh oh-my-zsh-git ttf-iosevka wpgtk-git feh neofetch thunar scrot compton polybar jsoncpp dunst neovim python-neovim node npm
 
 echo "Copying lightdm config to /etc/lightdm..."
 sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-mini-greeter.conf
@@ -16,3 +16,8 @@ sudo chown justinian:justinian -R .oh-my-zsh
 
 echo "Downloading wpg templates..."
 wpg-install.sh -gi
+
+echo "Installing VimPlug..."
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
