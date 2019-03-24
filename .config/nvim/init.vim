@@ -4,8 +4,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'deviantfero/wpgtk.vim'
 
 Plug 'junegunn/goyo.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python ~/.local/share/nvim/plugged/YouCompleteMe/install.py' }
+Plug 'Valloric/YouCompleteMe'
+Plug 'ervandew/supertab'
+Plug 'kien/ctrlp.vim'
+
 Plug 'SirVer/ultisnips'
+Plug 'epilande/vim-react-snippets'
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -33,6 +37,7 @@ colorscheme wpgtk
 set mouse=a
 set nohlsearch
 set encoding=utf-8
+let mapleader = " "
 
 set number                    " line numbers
 set relativenumber
@@ -64,6 +69,12 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
+" vim mappings
+:nnoremap <Leader>o :only<cr>
+:nnoremap <Leader>L :lopen<cr>
+:nnoremap <Leader>l :lcl<cr>
+:nnoremap <Leader>p :pcl<cr>
+
 " Goyo
 :nnoremap <F6> :Goyo<cr>
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -80,3 +91,16 @@ function! s:goyo_leave()
   nunmap <buffer> <Up>
   nunmap <buffer> <Down>
 endfunction
+
+" UltiSnips
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" YCM
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = '<C-n>'
