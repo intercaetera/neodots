@@ -6,7 +6,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # zsh settings
 ZSH=~/.oh-my-zsh
 ZSH_THEME="lambda-mod"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 EDITOR='nvim'
