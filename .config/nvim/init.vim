@@ -28,6 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 syntax on
@@ -74,6 +75,8 @@ set softtabstop=2
 :nnoremap <Leader>L :lopen<cr>
 :nnoremap <Leader>l :lcl<cr>
 :nnoremap <Leader>p :pcl<cr>
+:nnoremap <CR> :noh<CR><CR>
+
 
 " Goyo
 :nnoremap <F6> :Goyo<cr>
@@ -104,3 +107,32 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" ALE
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters_explicit = 1
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fixers_explicit = 1
+let g:ale_lint_on_enter = 1
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+set signcolumn=yes
+
+" Gutentags
+" jsx
+let g:jsx_ext_required = 0
+
+" gutentags
+let g:gutentags_ctags_exclude = [ 'node_modules/**' ]
+set tags =./tags,tags;$HOME
+
+" ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd vimenter * NERDTree 
+map <Leader>r :NERDTreeToggle<CR>
+map <Leader>y :NERDTreeFind<CR>
