@@ -22,6 +22,7 @@ Plug 'wavded/vim-stylus'
 Plug 'Quramy/tsuquyomi'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'w0rp/ale', { 'do': 'npm install -g eslint' }
+Plug 'Galooshi/vim-import-js', { 'do': 'npm install -g import-js' }
 
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
@@ -118,7 +119,6 @@ let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 set signcolumn=yes
 
-" Gutentags
 " jsx
 let g:jsx_ext_required = 0
 
