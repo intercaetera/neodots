@@ -24,7 +24,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = go mono 7
+    font = Roboto 9
     line_height = 0
 
     markup = full
@@ -51,7 +51,7 @@
 
     ### Icons ###
     icon_position = left
-    max_icon_size = 64
+    max_icon_size = 32
     icon_path = .icons/flattrcolor/status/24:.icons/flattrcolor/devices/48:.icons/flattrcolor/apps/scalable:.icons/flattrcolor/actions/scalable
 
     ### History ###

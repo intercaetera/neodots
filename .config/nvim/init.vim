@@ -78,7 +78,6 @@ set softtabstop=2
 :nnoremap <Leader>p :pcl<cr>
 :nnoremap <CR> :noh<CR><CR>
 
-
 " Goyo
 :nnoremap <F6> :Goyo<cr>
 autocmd! User GoyoEnter nested call <SID>goyo_enter()

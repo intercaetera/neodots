@@ -2,7 +2,7 @@
 sudo -v
 
 echo "Installing packages..."
-sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter termite chromium dmenu zsh oh-my-zsh-git ttf-iosevka wpgtk-git feh neofetch thunar scrot compton polybar jsoncpp dunst neovim python-neovim node npm
+sudo pikaur -S i3-gaps lightdm lightdm-mini-greeter termite chromium dmenu zsh oh-my-zsh-git ttf-iosevka wpgtk-git feh neofetch thunar scrot compton polybar jsoncpp dunst neovim python-neovim node npm maim xclip
 
 echo "Copying lightdm config to /etc/lightdm..."
 sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-mini-greeter.conf
