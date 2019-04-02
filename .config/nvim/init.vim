@@ -30,6 +30,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 syntax on
@@ -135,3 +136,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd vimenter * NERDTree 
 map <Leader>r :NERDTreeToggle<CR>
 map <Leader>y :NERDTreeFind<CR>
+
+" closetag
+let g:closetag_filenames = "*.html,*.js"
