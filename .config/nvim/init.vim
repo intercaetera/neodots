@@ -31,6 +31,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 syntax on
@@ -133,7 +134,6 @@ endif
 
 " nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd vimenter * NERDTree 
 map <Leader>r :NERDTreeToggle<CR>
 map <Leader>y :NERDTreeFind<CR>
 
