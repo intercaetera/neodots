@@ -32,6 +32,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
+
+Plug 'mboughaba/i3config.vim'
 call plug#end()
 
 syntax on
