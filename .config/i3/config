@@ -5,7 +5,7 @@ gaps inner 20
 gaps outer 10
 
 # execute
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id termite
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+n exec --no-startup-id ~/.scripts/do_not_disturb.sh -s
 bindsym $mod+n exec --no-startup-id ~/.scripts/do_not_disturb.sh -e
@@ -22,8 +22,8 @@ exec --no-startup-id sh ~/.config/wpg/wp_init.sh
 exec_always --no-startup-id zsh ~/.scripts/start_polybar.sh
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume 0 0%
 
 # keyboard layout switches
