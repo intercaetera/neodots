@@ -18,6 +18,7 @@ alias lsd='ls -l | lolcat' # yes
 alias czsh='nvim ~/.zshrc'
 alias cbs='nvim ~/.yadm/bootstrap'
 alias ctrm='nvim ~/.config/termite/config'
+alias cal='nvim ~/.config/alacritty/alacritty.yml'
 alias cvrc='nvim ~/.config/nvim/init.vim'
 alias ci3='nvim ~/.config/i3/config'
 alias cpb='nvim ~/.config/wpg/templates/polybar.base'
