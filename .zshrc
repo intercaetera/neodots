@@ -22,6 +22,7 @@ alias cal='nvim ~/.config/alacritty/alacritty.yml'
 alias cvrc='nvim ~/.config/nvim/init.vim'
 alias ci3='nvim ~/.config/i3/config'
 alias cpb='nvim ~/.config/wpg/templates/polybar.base'
+alias ccoc='nvim ~/.config/nvim/coc-settings.json'
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -33,3 +34,5 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
