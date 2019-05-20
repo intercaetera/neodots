@@ -2,9 +2,10 @@ set nocompatible
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'deviantfero/wpgtk.vim'
+Plug 'dylanaraps/wal.vim'
 
 Plug 'junegunn/goyo.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
 
@@ -38,7 +39,7 @@ call plug#end()
 
 syntax on
 filetype plugin indent on
-colorscheme wpgtk
+colorscheme wal
 
 set mouse=a
 set nohlsearch
@@ -62,10 +63,10 @@ set suffixesadd=.js,.jsx,.vue
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " splits
-nnoremap <C-Left> <C-W><Left>
-nnoremap <C-Right> <C-W><Right>
-nnoremap <C-Up> <C-W><Up>
-nnoremap <C-Down> <C-W><Down>
+nnoremap <A-Left> <C-W><Left>
+nnoremap <A-Right> <C-W><Right>
+nnoremap <A-Up> <C-W><Up>
+nnoremap <A-Down> <C-W><Down>
 set splitbelow
 set splitright
 
@@ -81,6 +82,10 @@ set softtabstop=2
 :nnoremap <Leader>l :lcl<cr>
 :nnoremap <Leader>p :pcl<cr>
 :nnoremap <CR> :noh<CR><CR>
+
+" python
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Goyo
 :nnoremap <F6> :Goyo<cr>
@@ -105,10 +110,6 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" YCM
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
 " SuperTab
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
@@ -126,8 +127,8 @@ set signcolumn=yes
 let g:jsx_ext_required = 0
 
 " gutentags
-let g:gutentags_ctags_exclude = [ 'node_modules/**' ]
-set tags =./tags,tags;$HOME
+let g:gutentags_ctags_exclude = [ 'node_modules/**', '*.min*', '*.css' ]
+set tags=./tags,tags;
 
 " ack
 if executable('ag')
