@@ -1,6 +1,7 @@
 {
-  "typescript.validate.enable": false,
-  "typescript.suggest.enabled": false,
-  "javascript.validate.enable": false,
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.noselect": false,
+  "suggest.snippetIndicator": "@",
+
   "javascript.suggest.enabled": false
 }

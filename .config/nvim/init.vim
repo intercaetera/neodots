@@ -5,7 +5,7 @@ Plug 'deviantfero/wpgtk.vim'
 Plug 'dylanaraps/wal.vim'
 
 Plug 'junegunn/goyo.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', { 'tag': '*', 'do': './install.sh' }
 Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
 
@@ -21,15 +21,11 @@ Plug 'posva/vim-vue'
 Plug 'mxw/vim-jsx'
 Plug 'wavded/vim-stylus'
 Plug 'Quramy/tsuquyomi'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
-Plug 'w0rp/ale', { 'do': 'npm install -g eslint' }
-Plug 'Galooshi/vim-import-js', { 'do': 'npm install -g import-js' }
 
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
@@ -113,16 +109,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " SuperTab
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" ALE
-let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_linters_explicit = 1
-let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
-let g:ale_fixers_explicit = 1
-let g:ale_lint_on_enter = 1
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
-set signcolumn=yes
-
 " jsx
 let g:jsx_ext_required = 0
 
@@ -142,3 +128,10 @@ map <Leader>y :NERDTreeFind<CR>
 
 " closetag
 let g:closetag_filenames = "*.html,*.js"
+
+" coc
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-css', 'coc-ultisnips', 'coc-html']
+
+nmap <silent> <leader>dd <Plug>(coc-definition)
+nmap <silent> <leader>dr <Plug>(coc-references)
+nmap <silent> <leader>di <Plug>(coc-implementation)
