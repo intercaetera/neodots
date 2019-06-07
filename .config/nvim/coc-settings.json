@@ -1,6 +1,4 @@
 {
-  "suggest.triggerAfterInsertEnter": true,
-  "suggest.noselect": false,
   "suggest.snippetIndicator": "@",
 
   "javascript.suggest.enabled": false

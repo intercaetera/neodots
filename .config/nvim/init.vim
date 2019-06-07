@@ -20,6 +20,7 @@ Plug 'posva/vim-vue'
 Plug 'mxw/vim-jsx'
 Plug 'wavded/vim-stylus'
 Plug 'Quramy/tsuquyomi'
+Plug 'w0rp/ale', { 'do': 'npm install -g eslint' }
 
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
@@ -104,6 +105,16 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " SuperTab
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
+" ALE
+let g:ale_linters = {'javascript': ['eslint']}	
+let g:ale_linters_explicit = 1	
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}	
+let g:ale_fixers_explicit = 1	
+let g:ale_lint_on_enter = 1	
+let g:ale_fix_on_save = 1	
+let g:ale_completion_enabled = 1	
+set signcolumn=yes
+
 " jsx
 let g:jsx_ext_required = 0
 
@@ -122,10 +133,10 @@ map <Leader>r :NERDTreeToggle<CR>
 map <Leader>y :NERDTreeFind<CR>
 
 " closetag
-let g:closetag_filenames = "*.html,*.js"
+let g:closetag_filenames = "*.html,*.js,*.vue"
 
 " coc
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-css', 'coc-ultisnips', 'coc-html']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-css', 'coc-ultisnips', 'coc-html', 'coc-vetur', 'coc-prettier']
 
 nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
