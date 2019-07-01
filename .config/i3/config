@@ -12,10 +12,10 @@ bindsym $mod+Shift+n exec --no-startup-id ~/.scripts/do_not_disturb.sh -s
 bindsym $mod+n exec --no-startup-id ~/.scripts/do_not_disturb.sh -e
 
 # screenshots
-bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
-bindsym Shift+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+Print exec --no-startup-id maim -s ~/Pictures/screenshots/$(date +%s).png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim ~/Pictures/screenshots/$(date +%s).png
+bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png && notify-send "Screenshot taken" "Saved to clipboard"
+bindsym Shift+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send "Screenshot taken" "Saved to clipboard"
+bindsym Ctrl+Print exec --no-startup-id maim -s ~/Pictures/screenshots/$(date +%s).png && notify-send "Screenshot taken" "Saved in the screenshots folder"
+bindsym Ctrl+Shift+Print exec --no-startup-id maim ~/Pictures/screenshots/$(date +%s).png && notify-send "Screenshot taken" "Saved in the screenshots folder"
 
 # startup
 exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
