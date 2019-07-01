@@ -1,0 +1,71 @@
+configuration {{
+  modi: "run,drun";
+  show-icons: true;
+  lines: 7;
+  line-padding: 10;
+  matching: "fuzzy";
+  bw: 0;
+  padding: 0;
+  separator-style: none;
+  hide-scrollbar: true;
+  line-margin: 0;
+  font: "Helvetica 12";
+}}
+
+* {{
+  vBackground: {color0};
+  vForeground: {color15};
+  vPrimary: {color8};
+
+  background-color: @vBackground;
+  border-color: @vPrimary;
+  text-color: @vForeground;
+  spacing: 0;
+  width: 512px;
+}}
+
+window {{
+  location: north east;
+  anchor: north east;
+  height: 100%;
+  y-offset: 32px;
+}}
+
+inputbar {{
+  border: 0 0 1px 0;
+  children: [prompt,entry];
+}}
+
+prompt {{
+  padding: 16px;
+  border: 0 1px 0 0;
+}}
+
+textbox {{
+  background-color: @vPrimary;
+  border: 0 0 1px 0;
+  border-color: @vBackground;
+  padding: 8px 16px;
+}}
+
+entry {{
+  padding: 16px;
+}}
+
+listview {{
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+}}
+
+element {{
+  border: 0 0 1px 0;
+  padding: 16px;
+}}
+
+element selected {{
+  background-color: @vPrimary;
+}}
+
+/* vim:ft=css
+
