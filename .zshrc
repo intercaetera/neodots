@@ -37,5 +37,6 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 
 source ~/.bashrc
 source $ZSH/oh-my-zsh.sh
+source ~/.bashrc
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
