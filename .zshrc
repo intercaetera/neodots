@@ -1,7 +1,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # colours
-(cat ~/.config/wpg/sequences &)
+(cat ~/.cache/wal/sequences &)
 
 # zsh settings
 ZSH=~/.oh-my-zsh
@@ -25,6 +25,7 @@ alias cpb='nvim ~/.config/wpg/templates/polybar.base'
 alias ccoc='nvim ~/.config/nvim/coc-settings.json'
 
 alias open='xdg-open'
+alias tls='cd ~/dev/tls'
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -35,6 +36,7 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
 
+source ~/.bashrc
 source $ZSH/oh-my-zsh.sh
 source ~/.bashrc
 
