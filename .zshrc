@@ -24,6 +24,8 @@ alias ci3='nvim ~/.config/i3/config'
 alias cpb='nvim ~/.config/wpg/templates/polybar.base'
 alias ccoc='nvim ~/.config/nvim/coc-settings.json'
 
+alias open='xdg-open'
+
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR

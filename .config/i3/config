@@ -10,6 +10,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 bindsym $mod+Shift+n exec --no-startup-id ~/.scripts/do_not_disturb.sh -s
 bindsym $mod+n exec --no-startup-id ~/.scripts/do_not_disturb.sh -e
+bindsym $mod+x exec --no-startup-id "sleep 1; xset dpms force standby"
 
 # screenshots
 bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png && notify-send "Screenshot taken" "Saved to clipboard"

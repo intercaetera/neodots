@@ -10,6 +10,7 @@ configuration {{
   hide-scrollbar: true;
   line-margin: 0;
   font: "Helvetica 12";
+  dpi: 192;
 }}
 
 * {{
@@ -21,14 +22,14 @@ configuration {{
   border-color: @vPrimary;
   text-color: @vForeground;
   spacing: 0;
-  width: 512px;
+  width: 1024px;
 }}
 
 window {{
   location: north east;
   anchor: north east;
   height: 100%;
-  y-offset: 32px;
+  y-offset: 64px;
 }}
 
 inputbar {{

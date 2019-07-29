@@ -14,6 +14,8 @@ Plug 'epilande/vim-react-snippets'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'elixir-editors/vim-elixir'
+
 Plug 'pangloss/vim-javascript'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
@@ -136,7 +138,7 @@ map <Leader>y :NERDTreeFind<CR>
 let g:closetag_filenames = "*.html,*.js,*.vue"
 
 " coc
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-css', 'coc-ultisnips', 'coc-html', 'coc-vetur', 'coc-prettier']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-css', 'coc-ultisnips', 'coc-html', 'coc-vetur' ]
 
 nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)

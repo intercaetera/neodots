@@ -8,10 +8,11 @@ error = ${{xrdb:color9:{color9}}}
 
 [bar/shared]
 width = 100%
-height = 32
+height = 64
 offset-y = 0%
 radius = 0.0
 fixed-center = true
+dpi = 192
 
 background = ${{colors.background}}
 foreground = ${{colors.foreground}}
@@ -28,7 +29,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-underline-size = 2
+underline-size = 4
 
 font-0 = Helvetica:fontformat=truetype:size=11;1
 font-1 = FontAwesome:style=Regular:size=14;2
@@ -39,7 +40,7 @@ tray-background = ${{colors.inactive}}
 
 [bar/right]
 inherit = bar/shared
-monitor = ${{env:MONITOR1:DVI-I-0}}
+monitor = ${{env:MONITOR1:HDMI-1}}
 
 modules-left = i3 mpd
 modules-center = xwindow
@@ -47,7 +48,7 @@ modules-right =  date
 
 [bar/left]
 inherit = bar/shared
-monitor = ${{env:MONITOR2:DVI-D-0}}
+monitor = ${{env:MONITOR2:HDMI-0}}
 
 modules-left = i3 eth volume
 modules-center = xwindow
