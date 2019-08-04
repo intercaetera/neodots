@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'elixir-editors/vim-elixir'
+Plug 'reasonml-editor/vim-reason-plus'
 
 Plug 'pangloss/vim-javascript'
 Plug 'digitaltoad/vim-pug'
@@ -135,7 +136,7 @@ map <Leader>r :NERDTreeToggle<CR>
 map <Leader>y :NERDTreeFind<CR>
 
 " closetag
-let g:closetag_filenames = "*.html,*.js,*.vue"
+let g:closetag_filenames = "*.html,*.js,*.vue,*.re"
 
 " coc
 let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-css', 'coc-ultisnips', 'coc-html', 'coc-vetur' ]

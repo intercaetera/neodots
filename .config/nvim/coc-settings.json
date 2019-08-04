@@ -1,5 +1,12 @@
 {
   "suggest.snippetIndicator": "@",
 
-  "javascript.suggest.enabled": false
+  "javascript.suggest.enabled": false,
+
+  "languageserver": {
+    "reason": {
+      "command": "reason-language-server",
+      "filetypes": ["reason"]
+    }
+  }
 }

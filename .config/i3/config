@@ -1,8 +1,8 @@
 set $mod Mod1
 for_window [class="^.*"] border pixel 0
 floating_modifier $mod
-gaps inner 20
-gaps outer 10
+gaps inner 10
+gaps outer 0
 
 # execute
 bindsym $mod+Return exec --no-startup-id alacritty
