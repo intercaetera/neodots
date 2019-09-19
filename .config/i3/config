@@ -3,9 +3,10 @@ for_window [class="^.*"] border pixel 0
 floating_modifier $mod
 gaps inner 10
 gaps outer 0
+border_radius 20
 
 # execute
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id alacritty --working-directory `xcwd`
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 bindsym $mod+Shift+n exec --no-startup-id ~/.scripts/do_not_disturb.sh -s

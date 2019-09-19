@@ -141,6 +141,17 @@ let g:closetag_filenames = "*.html,*.js,*.vue,*.re"
 " coc
 let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-css', 'coc-ultisnips', 'coc-html', 'coc-vetur' ]
 
-nmap <silent> <leader>dd <Plug>(coc-definition)
-nmap <silent> <leader>dr <Plug>(coc-references)
-nmap <silent> <leader>di <Plug>(coc-implementation)
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gr <Plug>(coc-references)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>cr <Plug>(coc-rename)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
